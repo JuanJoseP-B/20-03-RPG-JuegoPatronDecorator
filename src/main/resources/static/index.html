@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RPG Hero Decorator + 2D Combat</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<h1 style="text-align: center;">⚙️ Armería Dinámica + Combate Real</h1>
+
+<div class="container">
+    <div class="panel">
+        <h2>Estado del Héroe</h2>
+        <div class="desc" id="hero-desc">Cargando...</div>
+        <div class="stat-row"><span>❤️ HP Actual</span> <span class="stat-value" id="current-hp">0</span> / <span id="stat-hp">0</span></div>
+        <div class="stat-row"><span>⚔️ Ataque</span> <span class="stat-value" id="stat-atk">0</span></div>
+        <div class="stat-row"><span>🛡️ Defensa</span> <span class="stat-value" id="stat-def">0</span></div>
+        <div class="stat-row"><span>⚡ Velocidad</span> <span class="stat-value" id="stat-spd">0</span></div>
+
+        <p style="color: #aaa; font-size: 0.9em; margin-top: 20px;">
+            🎮 <b>Controles:</b> W, A, S, D para moverte.<br>
+            ⚔️ <b>Ataque:</b> Barra ESPACIADORA cerca del Orco.<br>
+            🔄 <b>Nota:</b> Cambiar equipo reinicia la partida.
+        </p>
+    </div>
+
+    <div class="panel">
+        <h2>Inventario</h2>
+        <div id="inventory-list">
+            <button class="btn btn-equip" id="btn-sword" onclick="toggleItem('sword')"><span>Espada de Hierro</span> <span id="status-sword">+</span></button>
+            <button class="btn btn-equip" id="btn-axe" onclick="toggleItem('axe')"><span>Hacha Pesada</span> <span id="status-axe">+</span></button>
+            <button class="btn btn-equip" id="btn-leather" onclick="toggleItem('leather')"><span>Armadura Cuero</span> <span id="status-leather">+</span></button>
+            <button class="btn btn-equip" id="btn-plate" onclick="toggleItem('plate')"><span>Armadura Placas</span> <span id="status-plate">+</span></button>
+            <button class="btn btn-equip" id="btn-str_potion" onclick="toggleItem('str_potion')"><span>Poción de Fuerza</span> <span id="status-str_potion">+</span></button>
+            <button class="btn btn-equip" id="btn-spd_aura" onclick="toggleItem('spd_aura')"><span>Aura de Rapidez</span> <span id="status-spd_aura">+</span></button>
+            <button class="btn btn-equip" id="btn-dragon" onclick="toggleItem('dragon')"><span>🔥 Sangre Dragón</span> <span id="status-dragon">+</span></button>
+        </div>
+    </div>
+</div>
+
+<div style="text-align: center; margin-top: 20px; position: relative;">
+    <canvas id="gameCanvas" width="800" height="400"></canvas>
+    <div id="game-log" style="color: #f39c12; font-weight: bold; height: 20px; margin-top: 10px;">¡Prepárate para luchar!</div>
+
+    <div id="battle-report" class="modal hidden">
+        <h2 id="report-title">Resultado</h2>
+        <p id="report-desc">...</p>
+        <button class="btn btn-combat" onclick="resetGame()">Reiniciar Batalla</button>
+    </div>
+</div>
+
+<script src="js/app.js"></script>
+</body>
+</html>
