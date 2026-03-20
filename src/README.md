@@ -4,7 +4,8 @@
 1. Abre el proyecto en IntelliJ.
 2. Navega hasta `src/main/java/org/rpg/Main.java`.
 3. Haz clic en el botón verde de "Play" (▶️) junto al método `main`.
-4. Verifica en la consola el mensaje: `Servidor Backend RPG iniciado correctamente en http://localhost:8081`.
+4. Ve a index.html y seleciona de la parte izquierda cualquier navegador 
+5. Verifica en la consola el mensaje: `Servidor Backend RPG iniciado correctamente en http://localhost:8081`.
 
 **Opción B: Usando la Terminal**
 1. Abre una terminal en la raíz del proyecto.
